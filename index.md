@@ -39,3 +39,5 @@ public void testReverseInPlace() {
     assertArrayEquals(new int[]{ 3 }, input1);
     }
   ```
+  **Symptom** 
+  
