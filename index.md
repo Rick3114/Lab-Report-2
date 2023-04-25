@@ -16,3 +16,26 @@ In the class `Handler` which implements `URL Handler` we have the method `handle
 
 **Web server page when `/add-message?s=How are you` is entered** 
 ![Image](WebServer3.png)
+
+## Part 2: Bugs
+In the class `ArrayExamples` the method method `reverseInPlace` has an error occur whenever it is used on an array that has two or more arrays.
+
+**Failure-Inducing Input:**
+```
+@Test 
+public void testReverseInPlace1() {
+    int[] input1 = { 3 , 5, 7};
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 7, 5, 3 }, input1);
+    }
+  ```
+  
+**Input that runs correctly**
+```
+@Test 
+public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+    }
+  ```
